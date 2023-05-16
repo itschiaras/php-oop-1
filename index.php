@@ -1,5 +1,5 @@
 <?php 
-
+include __DIR__.'/Models/Genre.php';
 include __DIR__.'/Models/Movie.php';
 include __DIR__.'/data/db.php';
 
@@ -24,7 +24,8 @@ include __DIR__.'/data/db.php';
                 <h5 class="card-title"><?php echo $movie->title ?></h5>
                 <p><?php echo $movie->original_title ?></p>
                 <span>Voto: <?php echo $movie->vote ?></span> <br>
-                <span>Genere: <?php echo $movie->genre ?></span>
+                <span>Genere: <?php foreach($movie->genre->genre as $type){
+                echo " $type "; } ?></span>
             </div>
         </div>
     <?php } ?>
