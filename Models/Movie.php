@@ -17,11 +17,7 @@ class Movie {
         $this->genre = $genre;
     }
 
-    public function getImage() {
-        return $this->image;
-    }
-
-    public function getVote() {
-        return $this->vote;
+    public function getCoverImage() {
+        return "<img class='card-img-top h-100' src='$this->image' alt='$this->title'>";
     }
 }
